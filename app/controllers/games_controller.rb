@@ -16,4 +16,10 @@ class GamesController < ApplicationController
     @game.update(game_params)
     render json: @game
   end
+
+  private
+
+  def game_params
+    params.permit(state: [])
+  end
 end
