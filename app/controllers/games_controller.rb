@@ -3,4 +3,7 @@ class GamesController < ApplicationController
     games = Game.all
     render json: games
   end
+  def show
+    render json: @game
+  end
 end
